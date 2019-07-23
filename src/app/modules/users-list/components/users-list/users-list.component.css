@@ -1,0 +1,8 @@
+/deep/ tr.mat-row:hover {
+  background: rgb(74, 185, 236);
+  cursor: pointer;
+}
+
+/deep/ table {
+  width: 100%;
+}

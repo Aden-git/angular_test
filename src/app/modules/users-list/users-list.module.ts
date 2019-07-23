@@ -1,9 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MatPaginatorModule, MatTableModule } from '@angular/material';
-import { CoreModule } from '../core';
-import { UsersResolver } from './resolvers';
-import { PaginationResolver } from './resolvers/pagination.resolver';
+import { MatPaginatorModule, MatTableModule, MatProgressSpinnerModule } from '@angular/material';
+import { CoreModule } from '../../core';
 
 import { UsersListRoutingModule } from './users-list-routing.module';
 import { UsersListComponent } from './components/users-list/users-list.component';
@@ -12,14 +10,11 @@ import { UsersListComponent } from './components/users-list/users-list.component
   declarations: [UsersListComponent],
   imports: [
     CommonModule,
-    CoreModule.forRoot(),
+    CoreModule,
     UsersListRoutingModule,
     MatPaginatorModule,
-    MatTableModule
-  ],
-  providers: [
-    UsersResolver,
-    PaginationResolver
+    MatTableModule,
+    MatProgressSpinnerModule
   ]
 })
 export class UsersListModule { }

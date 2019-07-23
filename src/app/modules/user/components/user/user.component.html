@@ -1,0 +1,10 @@
+<button mat-button
+        (click)="back()">Back</button>
+
+<ng-container *ngIf="loading; else userData">
+  <mat-spinner></mat-spinner>
+</ng-container>
+
+<ng-template #userData>
+  <app-user-data [user]="user"></app-user-data>
+</ng-template>
